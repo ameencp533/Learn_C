@@ -56,6 +56,16 @@ void display_connection2(struct device * current_device){
 
 }
 
+void extend_connection(struct device *HeadDevice, struct device *new_device){
+
+    
+    while (HeadDevice->next!=NULL)
+    {
+        HeadDevice = HeadDevice->next;
+    }
+    HeadDevice->next=new_device;
+}
+
 
 
 
@@ -69,13 +79,13 @@ int main(){
     char hostname2[]= {"R2"};
     struct device * device2 = create_device (2,ip2,hostname2);
 
-    device1->next=device2;
+    // device1->next=device2;
+    extend_connection(device1,device1);
 
     display_connection(&device1);
-    display_connection2(device1);
+    // display_connection2(device1);
     
-    printf("printing device1 ppts : %s \n",device1->hostname);
-
+    
     free(device1);
     free(device2);
     
