@@ -50,7 +50,7 @@ int main(){
 
     char ip1[] ={"100.65.212.6"};
     char hostname1[]= {"R1"};
-    struct device * device1 = create_device (1,&ip1,&hostname1);
+    struct device * device1 = create_device (1,ip1,hostname1);
 
     display_connection(&device1);
 
