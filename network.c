@@ -74,6 +74,7 @@ int main(){
     display_connection(&device1);
     display_connection2(device1);
     
+    printf("printing device1 ppts : %s \n",device1->hostname);
 
     free(device1);
     free(device2);
