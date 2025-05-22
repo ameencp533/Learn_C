@@ -61,7 +61,7 @@ void extend_connection(struct device *HeadDevice, struct device *new_device){
     
     while (HeadDevice->next!=NULL)
     {
-        printf("%s\n",HeadDevice->hostname);
+        
         HeadDevice = HeadDevice->next;
     }
     HeadDevice->next=new_device;
