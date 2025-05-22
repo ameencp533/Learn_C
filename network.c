@@ -48,10 +48,16 @@ void display_connection(struct device ** current_device_ptr){
 
 int main(){
 
-    char ip1[] ={"100.65.212.6"};
+    char ip1[] ={"1.1.1.1"};
     char hostname1[]= {"R1"};
     struct device * device1 = create_device (1,ip1,hostname1);
 
+    char ip2[] ={"2.2.2.2"};
+    char hostname2[]= {"R2"};
+    struct device * device2 = create_device (2,ip2,hostname2);
+
+    device1->next=device2;
+    
     display_connection(&device1);
 
     free(device1);
