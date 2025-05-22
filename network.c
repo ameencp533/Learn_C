@@ -17,8 +17,8 @@ struct device * create_device(int id , char * ip_ptr , char * hn_ptr){
         struct device * current_device = (struct device *) malloc(sizeof(struct device ));
 
         current_device->device_id=id;
-        strcpy(current_device->ip, *ip_ptr);
-        strcpy(current_device->hostname ,*hn_ptr) ;
+        strcpy(current_device->ip, ip_ptr);
+        strcpy(current_device->hostname ,hn_ptr) ;
 
         current_device->next=NULL;
 
