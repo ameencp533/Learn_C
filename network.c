@@ -43,6 +43,19 @@ void display_connection(struct device ** current_device_ptr){
 
 }
 
+void display_connection2(struct device * current_device){
+
+    while(current_device!=NULL){
+        printf("%s ",current_device->hostname);
+        if (current_device->next!=NULL){
+            printf("==> ");
+        }
+        current_device =current_device->next;
+    }
+    printf ("\n");
+
+}
+
 
 
 
@@ -57,10 +70,13 @@ int main(){
     struct device * device2 = create_device (2,ip2,hostname2);
 
     device1->next=device2;
-    
+
     display_connection(&device1);
+    display_connection2(device1);
+    
 
     free(device1);
+    free(device2);
     
     return 0;
 }
