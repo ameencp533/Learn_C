@@ -82,8 +82,8 @@ int main(){
     // device1->next=device2;
     extend_connection(device1,device1);
 
-    printf("%s \n %s \n",device1->hostname,device2->hostname);
-    printf("%p \n %p \n",device1->next,device2->next);
+    printf("%s  %s \n",device1->hostname,device2->hostname);
+    printf("%p  %p \n",device1->next,device2->next);
     // display_connection(&device1);
     // display_connection2(device1);
     
