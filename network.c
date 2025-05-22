@@ -89,8 +89,13 @@ int main(){
     char hostname2[]= {"R2"};
     struct device * device2 = create_device (2,ip2,hostname2);
 
+    char ip3[] ={"3.3.3.3"};
+    char hostname3[]= {"R3"};
+    struct device * device3 = create_device (3,ip3,hostname3);
+
     // device1->next=device2;
     extend_connection2(&device1,device2);
+    extend_connection(device1,device3);
 
     // printf("%s  %s \n",device1->hostname,device2->hostname);
 
