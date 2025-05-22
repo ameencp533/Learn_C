@@ -90,13 +90,12 @@ int main(){
     struct device * device2 = create_device (2,ip2,hostname2);
 
     // device1->next=device2;
-    extend_connection2(&device1,device1);
+    extend_connection2(&device1,device2);
 
     // printf("%s  %s \n",device1->hostname,device2->hostname);
 
-    struct device *temp = device1->next;
-    printf("%s  %s \n",device1->hostname,temp->hostname);
-    // display_connection(&device1);
+    
+     display_connection(&device1);
     // display_connection2(device1);
     
     
